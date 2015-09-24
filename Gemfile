@@ -15,7 +15,7 @@ gem 'rake'
 
 gem 'shotgun'
 
-gem 'rspotify'
+gem 'twitter'
 
 group :test do
   gem 'shoulda-matchers'
