@@ -15,7 +15,7 @@ gem 'rake'
 
 gem 'shotgun'
 
-gem 'twitter'
+gem 'tweetstream'
 
 group :test do
   gem 'shoulda-matchers'
