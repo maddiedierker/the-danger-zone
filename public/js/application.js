@@ -12,5 +12,5 @@ $(document).ready(function() {
         $('.cat-container').prepend('<div class="single-cat">' + response + '</div>');
       });
     });
-  }, 1000);
+  }, 5000);
 });
