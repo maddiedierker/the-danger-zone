@@ -14,9 +14,9 @@ class Kitter < ActiveRecord::Base
   # end
 
   def self.get_cat_stream
-    CAT_REGEX = /[#]*cats[s]*/
+    cat_regex = /( |^)#*cats*\s/i
     TweetStream::Client.new.sample do |status|
-      return "#{status.text}" if !!status.text.scan(CAT_REGEX)
+      return "#{status.text}" if status.text =~ (cat_regex)
     end
   end
 
