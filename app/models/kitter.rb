@@ -7,17 +7,12 @@ class Kitter < ActiveRecord::Base
     end
   end
 
-  # def self.get_cat_stream
-  #   TweetStream::Client.new.track('cat', 'cats', 'kitten', 'kittens') do |status|
-  #     return "#{status.text}"
-  #   end
-  # end
 
   def self.get_cat_stream
     cat_regex = /( |^)#*cats*\s/i
-    TweetStream::Client.new.sample do |status|
-      return "#{status.text}" if status.text =~ (cat_regex)
+    kitten_regex = /( |^)#*kittens*\s/i
+    TweetStream::Client.new.track('cat', 'cats', 'kitten', 'kittens') do |status|
+      return "#{status.text}" if (status.text =~ (cat_regex) || status.text =~ (kitten_regex))
     end
   end
-
 end
