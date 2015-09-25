@@ -1,0 +1,39 @@
+body {
+background-image: url('http://s3.amazonaws.com/rapgenius/cats-animals-kittens-background.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+nav {
+  font-family: 'Lobster', cursive;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  background-color: #6CDAFF;
+
+}
+
+nav h1{
+  font-size: 50px;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.cat-container {
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  top: 200px;
+}
+
+.single-cat {
+  background-color: #6CDAFF;
+  opacity: 0.65;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: solid black 2px;
+  width: 50%;
+  margin-left: 25%;
+
+}
