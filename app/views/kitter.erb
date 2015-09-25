@@ -1,5 +1,3 @@
-<% TweetStream::Client.new.track('cat', 'cats', 'kitty', 'kitten', 'kittens') do |status| %>
   <div class="cat-container">
-    <%= status.text %>
+    <div class="single-cat"><%= @cat %></div>
   </div>
-<% end %>

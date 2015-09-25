@@ -1,8 +1,8 @@
 get '/' do
-  # @cat = Kitter.get_cat_stream
+  @cat = Kitter.get_cat_stream
 
   if request.xhr?
-    erb :'kitter', layout: false
+    @cat.to_json
   else
     erb :'kitter'
   end
